@@ -1,0 +1,13 @@
+one:
+  firstname: Joe
+  lastname: Bob
+  username: user_one
+  phone_number: "+1 (123) 456-7890"
+  email: joe@bob.com
+
+two:
+  firstname: Joe
+  lastname: Bob
+  username: user_two
+  phone_number: "+1 (321) 456-7890"
+  email: joe@bob.com
