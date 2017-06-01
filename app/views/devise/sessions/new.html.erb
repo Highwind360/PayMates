@@ -1,0 +1,26 @@
+<section class="wrapper special">
+  <h2>Log in</h2>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= content_tag :div, class: ["row", "uniform"] do %>
+      <div class="4u$ -4u 12u$(xsmall)">
+        <%= f.text_field :username, autofocus: true %>
+      </div>
+
+      <div class="4u$ -4u 12u$(xsmall)">
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+      <div class="4u$ -4u 12u$(xsmall)">
+        <%= f.check_box :remember_me %>
+      </div>
+      <% end -%>
+
+      <div class="2u$ -5u">
+        <%= f.submit "Log in", class: "special" %>
+      </div>
+	<% end -%>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</section>

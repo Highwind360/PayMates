@@ -1,0 +1,40 @@
+<section class="wrapper special">
+  <h2>Sign Up</h2>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+
+    <%= content_tag :div, class: ["row", "uniform"] do %>
+      <div class="4u$ -4u 12u$(xsmall)">
+        <%= f.email_field :email, placeholder: "Email", autofocus: true %>
+      </div>
+
+      <%# TODO: fix the validation of the fields,
+	  use: https://github.com/DavyJonesLocker/client_side_validations
+	  %>
+      <% [:first_name, :last_name, :phone_number, :username].each do |attr| -%>
+      <div class="4u$ -4u 12u$(xsmall)">
+        <%= f.text_field attr, placeholder: attr.to_s.titleize %>
+      </div>
+      <% end -%>
+
+      <div class="4u$ -4u 12u$(xsmall)">
+        <% if @minimum_password_length %>
+          <% pass_mesg = " (min #{@minimum_password_length} chars)" %>
+        <% end %>
+        <%= f.password_field :password, placeholder: "Password" + pass_mesg, autocomplete: "off" %>
+      </div>
+
+      <div class="4u$ -4u 12u$(xsmall)">
+        <%= f.password_field :password_confirmation, placeholder: "Password Confirmation", autocomplete: "off" %>
+      </div>
+
+      <div class="2u$ -5u">
+        <%= f.submit "Sign up", class: "special" %>
+      </div>
+    <% end -%>
+  <% end %>
+
+  <div class="12u$">
+    <%= render "devise/shared/links" %>
+  </div>
+</section>

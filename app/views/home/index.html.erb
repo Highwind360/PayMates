@@ -5,9 +5,8 @@
       <p>Welcome to PayMates, where you can post<br />
 	  payment notifications to your roomates!</p>
       <ul class="actions">
-	    <% # TODO: dynamically load the urls for sign in/sign up %>
-        <li><a href="#" class="button special">Sign In</a></li>
-        <li><a href="#" class="button special">Sign Up</a></li>
+        <li><a href="<%= new_user_session_path %>" class="button special">Sign In</a></li>
+        <li><a href="<%= new_user_registration_path %>" class="button special">Sign Up</a></li>
       </ul>
     </div>
   </section>

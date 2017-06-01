@@ -38,9 +38,8 @@
                   <div id="menu">
                     <ul>
                       <li><a href="/">Home</a></li>
-					  <%# TODO: route the login buttons to the appropriate pages dynamically %>
-                      <li><a href="#">Sign Up</a></li>
-                      <li><a href="#">Log In</a></li>
+                      <li><a href="<%= new_user_registration_path %>">Sign Up</a></li>
+                      <li><a href="<%= new_user_session_path %>">Log In</a></li>
                     </ul>
                   </div>
                 </li>
