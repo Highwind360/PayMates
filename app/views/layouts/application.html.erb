@@ -28,7 +28,7 @@
     <!-- Page Wrapper -->
       <div id="page-wrapper">
 
-	    <!-- Header -->
+        <!-- Header -->
           <header id="header" class="alt">
             <h1><a href="index.html">Spectral</a></h1>
             <nav id="nav">
@@ -47,14 +47,15 @@
             </nav>
           </header>
 
-		<!-- Flash Messages Container -->
-		<%# TODO: customize the flash messages %>
-		<% flash.each do |name, mesg| -%>
-		  <%= content_tag :div, class: ["flash", "box", "align-center"] do %>
-		    <%= content_tag :h2, name, class: "major" %>
-			<%= content_tag :p, mesg %>
-		  <% end -%>
-		<% end -%>
+        <!-- Flash Messages Container -->
+        <% flash.each do |name, mesg| -%>
+          <section class="wrapper special row">
+            <%= content_tag :div, class: ["flash", "box", "6u$", "-3u", "12u$(xsmall)"] do %>
+              <%= content_tag :h2, name, class: "major" %>
+              <%= content_tag :p, mesg %>
+            <% end -%>
+          </section
+        <% end -%>
 
         <%= yield %>
 
