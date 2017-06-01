@@ -1,7 +1,7 @@
 unless User.count > 0
   User.create(
-    firstname: "Super",
-    lastname: "User",
+    first_name: "Super",
+    last_name: "User",
     username: "admin",
     password: ENV["DEFAULT_ADMINISTRATOR_PASSWORD"],
     email: ENV["DEFAULT_ADMINISTRATOR_EMAIL"],
