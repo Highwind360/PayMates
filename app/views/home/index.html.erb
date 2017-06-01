@@ -3,10 +3,12 @@
     <div class="inner">
       <h2>PayMates</h2>
       <p>Welcome to PayMates, where you can post<br />
-	  payment notifications to your roomates!</p>
+      payment notifications to your roomates!</p>
+      <% unless user_signed_in? %>
       <ul class="actions">
         <li><a href="<%= new_user_session_path %>" class="button special">Sign In</a></li>
         <li><a href="<%= new_user_registration_path %>" class="button special">Sign Up</a></li>
       </ul>
+      <% end -%>
     </div>
   </section>
